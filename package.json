@@ -7,6 +7,10 @@
   "author": "Victor Glindås <glinkis@gmail.com>",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "build": "tsc",
+    "start": "tsc --watch"
+  },
   "devDependencies": {
     "typescript": "3.5.3"
   }
