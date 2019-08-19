@@ -1,1 +1,3 @@
-const app = document.getElementById('app')!
+import { canvas } from './canvas.js'
+
+console.log(canvas)
