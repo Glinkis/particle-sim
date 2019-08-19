@@ -1,0 +1,10 @@
+{
+  "name": "particle-sim",
+  "version": "1.0.0",
+  "description": "A particle simulator",
+  "main": "index.js",
+  "repository": "https://github.com/Glinkis/particle-sim.git",
+  "author": "Victor Glindås <glinkis@gmail.com>",
+  "license": "MIT",
+  "private": true
+}
