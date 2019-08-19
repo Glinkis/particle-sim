@@ -1,5 +1,4 @@
-import { context } from './canvas.js'
-console.log(context)
+import './context.js'
 
 let lastTimestamp = 0
 

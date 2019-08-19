@@ -1,5 +1,4 @@
 const canvas = document.getElementById('canvas') as HTMLCanvasElement
-const context = canvas.getContext('webgl') as WebGLRenderingContext
 
 function resizeCanvas() {
   const dpi = window.devicePixelRatio
@@ -10,4 +9,4 @@ function resizeCanvas() {
 resizeCanvas()
 addEventListener('resize', resizeCanvas)
 
-export { canvas, context }
+export { canvas }
