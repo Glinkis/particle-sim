@@ -26,10 +26,11 @@ const vertices = new Float32Array([
 ])
 
 gl.bindBuffer(gl.ARRAY_BUFFER, gl.createBuffer())
+gl.bufferData(gl.ARRAY_BUFFER, vertices, gl.STATIC_DRAW)
+
 export function render() {
-  gl.bufferData(gl.ARRAY_BUFFER, vertices, gl.STATIC_DRAW)
   gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight)
-  gl.clearColor(0, 0, 0, 1)
+  gl.clearColor(0, 0, 0.2, 1)
   gl.clear(gl.COLOR_BUFFER_BIT)
   gl.drawArrays(gl.TRIANGLES, 0, vertices.length / 2)
 }
