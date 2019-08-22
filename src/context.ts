@@ -11,24 +11,23 @@ export const gl = canvas.getContext('webgl', {
   preserveDrawingBuffer: false
 }) as WebGLRenderingContext
 
-const aspect = canvas.width / canvas.height
+const size = 0.5
 
 // prettier-ignore
 const vertices = new Float32Array([
   // Triangle 1
-  -0.5,  0.5 * aspect,
-   0.5,  0.5 * aspect,
-   0.5, -0.5 * aspect,
+ -size, size,
+  size, size,
+  size,-size,
   // Triangle 2
-  -0.5,  0.5 * aspect,
-   0.5, -0.5 * aspect,
-  -0.5, -0.5 * aspect
+ -size, size,
+  size,-size,
+ -size,-size
 ])
 
 gl.bindBuffer(gl.ARRAY_BUFFER, gl.createBuffer())
-gl.bufferData(gl.ARRAY_BUFFER, vertices, gl.STATIC_DRAW)
-
 export function render() {
+  gl.bufferData(gl.ARRAY_BUFFER, vertices, gl.STATIC_DRAW)
   gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight)
   gl.clearColor(0, 0, 0, 1)
   gl.clear(gl.COLOR_BUFFER_BIT)
