@@ -7,12 +7,10 @@ export const meta = {
   deltaTime: 0
 }
 
-function tick(timestamp: number) {
+export function tick(timestamp: number) {
   meta.deltaTime = meta.currTime - meta.lastTime
   meta.lastTime = timestamp
 
   render()
   requestAnimationFrame(tick)
 }
-
-requestAnimationFrame(tick)
