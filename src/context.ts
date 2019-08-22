@@ -18,7 +18,6 @@ fetchShaders().then(([vert, frag]) => {
   const fragShader = createShader(frag, gl.FRAGMENT_SHADER, gl)
 
   const program = createProgram([vertShader, fragShader], gl)
-  console.log(program)
 
   gl.useProgram(program)
 })

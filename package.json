@@ -10,12 +10,12 @@
   "scripts": {
     "build": "tsc",
     "watch": "tsc --watch",
-    "serve": "serve",
+    "serve": "live-server public",
     "start": "concurrently \"npm run watch\" \"npm run serve\""
   },
   "devDependencies": {
     "concurrently": "4.1.2",
-    "serve": "11.1.0",
+    "live-server": "1.2.1",
     "typescript": "3.5.3"
   }
 }
