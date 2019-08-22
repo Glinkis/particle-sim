@@ -1,12 +1,17 @@
 import './context.js'
+import { render } from './context.js'
 
-let lastTimestamp = 0
-
-function deltaTick(deltaTime: number) {}
+export const meta = {
+  currTime: 0,
+  lastTime: 0,
+  deltaTime: 0
+}
 
 function tick(timestamp: number) {
-  deltaTick(timestamp - lastTimestamp)
-  lastTimestamp = timestamp
+  meta.deltaTime = meta.currTime - meta.lastTime
+  meta.lastTime = timestamp
+
+  render()
   requestAnimationFrame(tick)
 }
 
