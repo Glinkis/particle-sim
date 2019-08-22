@@ -15,4 +15,4 @@ function tick(timestamp: number) {
   requestAnimationFrame(tick)
 }
 
-tick(0)
+requestAnimationFrame(tick)
